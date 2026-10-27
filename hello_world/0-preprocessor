@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc --preprocess $cfile -o c
+gcc --preprocess $CFILE -o c
