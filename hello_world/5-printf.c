@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+/**
+ * main - yalini, single line
+ *
+ * Return: Description of the returned value
+ */
+int main(void)
+{
+	printf("with proper grammar, but the outcome is a piece of art,");
+	return (0);
+}
