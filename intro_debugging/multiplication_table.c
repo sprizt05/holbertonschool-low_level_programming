@@ -1,39 +1,23 @@
 #include <stdio.h>
 
-/**
- * print_table - prints a table of products
- * @size: size of the table
- */
 void print_table(int size)
 {
-	int row, col;
+    int row, col;
 
-	if (size <= 0)
-	{
-		printf("\n");
-		return;
-	}
-
-	for (row = 1; row <= size; row++)
-	{
-		for (col = 1; col <= size; col++)
-		{
-			printf("%d", row * col);
-			if (col < size)
-			{
-				printf(" ");
-			}
-		}
-		printf("\n");
-	}
+    for (row = 1; row <= size; row++)
+    {
+        for (col = 1; col <= size; col++)
+        {
+            printf("%d ", row * col);
+        }
+        printf("\n");
+    }
 }
 
-/**
- * main - check the code
- * Return: Always 0.
- */
+/* -- DO NOT Modify the code below this line -- */
+
 int main(void)
 {
-	print_table(3);
-	return (0);
+    print_table(4);
+    return 0;
 }
