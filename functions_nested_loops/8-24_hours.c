@@ -1,37 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * jack_bauer - Short description, single line
- * 
- * Return: Description of the returned value
+ * jack_bauer - prints every minute of the day of Jack Bauer
+ *
+ * Return: void
  */
-int main(void)
+void jack_bauer(void)
 {
-	int h1;
-	int h2;
-	int m1;
-	int m2;
+	int h, m;
 
-	while (h1 + h2 + m1 + m2 != 19)
+	for (h = 0; h < 24; h++)
 	{
-		printf("%d%d:%d%d\n", h1, h2, m1, m2);
-		m2++;
-		if (m2 == 9)
+		for (m = 0; m < 60; m++)
 		{
-			m2 = 0;
-			m1++;
-		}
-		else if (m1 == 5)
-		{
-			m1 = 0;
-			h2++;
-		}
-		else if (h2 == 9)
-		{
-			h2 = 0;
-			h1++;
+			_putchar((h / 10) + '0');
+			_putchar((h % 10) + '0');
+			_putchar(':');
+			_putchar((m / 10) + '0');
+			_putchar((m % 10) + '0');
+			_putchar('\n');
 		}
 	}
-	return 0;
 }
