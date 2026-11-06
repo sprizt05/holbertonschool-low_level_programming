@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * print_chessboard - Prints the chessboard
- * @a: The 8x8 chessboard array to print
+ * print_chessboard - prints the chessboard
+ * @a: chessboard to print
  */
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	int i;
+	int j;
 
 	for (i = 0; i < 8; i++)
 	{
