@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int choice;
+	int choice, a, b;
 
 	printf("Simple Calculator\n");
 	do {
@@ -22,13 +22,23 @@ int main(void)
 		if (scanf("%d", &choice) != 1)
 			break;
 
-		if (choice == 0)
+		if (choice == 1)
+		{
+			printf("A: ");
+			if (scanf("%d", &a) != 1)
+				break;
+			printf("B: ");
+			if (scanf("%d", &b) != 1)
+				break;
+			printf("Result: %d\n", a + b);
+		}
+		else if (choice == 0)
 		{
 			printf("Bye!\n");
 		}
-		else if (choice >= 1 && choice <= 4)
+		else if (choice >= 2 && choice <= 4)
 		{
-			/* Les opérations seront implémentées dans les prochaines étapes */
+			/* Les autres opérations seront ajoutées ensuite */
 		}
 		else
 		{
