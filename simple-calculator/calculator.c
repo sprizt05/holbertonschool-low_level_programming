@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-	int choice, a, b;
+	int choice;
+	float a, b;
 
 	printf("Simple Calculator\n");
 	do {
@@ -21,43 +22,32 @@ int main(void)
 		if (scanf("%d", &choice) != 1)
 			break;
 
-		if (choice == 1)
+		if (choice >= 1 && choice <= 4)
 		{
 			printf("A: ");
-			if (scanf("%d", &a) != 1)
+			if (scanf("%f", &a) != 1)
 				break;
 			printf("B: ");
-			if (scanf("%d", &b) != 1)
+			if (scanf("%f", &b) != 1)
 				break;
-			printf("Result: %d\n", a + b);
-		}
-		else if (choice == 2)
-		{
-			printf("A: ");
-			if (scanf("%d", &a) != 1)
-				break;
-			printf("B: ");
-			if (scanf("%d", &b) != 1)
-				break;
-			printf("Result: %d\n", a - b);
-		}
-		else if (choice == 3)
-		{
-			printf("A: ");
-			if (scanf("%d", &a) != 1)
-				break;
-			printf("B: ");
-			if (scanf("%d", &b) != 1)
-				break;
-			printf("Result: %d\n", a * b);
+
+			if (choice == 1)
+				printf("Result: %.0f\n", a + b);
+			else if (choice == 2)
+				printf("Result: %.0f\n", a - b);
+			else if (choice == 3)
+				printf("Result: %.0f\n", a * b);
+			else if (choice == 4)
+			{
+				if (b == 0)
+					printf("Error: division by zero\n");
+				else
+					printf("Result: %.1f\n", a / b);
+			}
 		}
 		else if (choice == 0)
 		{
 			printf("Bye!\n");
-		}
-		else if (choice == 4)
-		{
-			/* La division sera ajoutée à l'étape suivante */
 		}
 		else
 		{
